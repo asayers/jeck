@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+  
+<!-- This is here because github runs jekyll in safe mode :/ -->
+  
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+  <title>Testing 1 2 3</title>
+	
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="css/deck.core.css">
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	
+  <!-- Style theme. More available in /css/style/ or create your own. -->
+  
+    <link rel="stylesheet" href="css/style.default.css">
+  
+	
+  <!-- Transition theme. More available in /css/transition/ or create your own. -->
+  
+	  <link rel="stylesheet" href="css/transition.default.css">
+  
+
+	<script src="js/modernizr.custom.js"></script>
+</head>
+
+<body class="deck-container">
+
+  <section class='slide'><h1><big>Jeck</big><br /><small>Jekyll + deck.js</small></h1></section><section class='slide'>
+<h2 id='deckjs'>deck.js</h2>
+
+<p class='slide'>A fantastic javascript library for creating a high-quality HTML5 presentations.</p>
+
+<ul>
+<li class='slide'>Presentation is contained in a single HTML file</li>
+
+<li class='slide'>Style and transition are defined by separate CSS files</li>
+
+<li class='slide'>Allows build animations</li>
+</ul>
+
+<p>See <a href='http://imakewebthings.com/deck.js/'>http://imakewebthings.com/deck.js/</a> for more.</p>
+
+<h2 id='jekyll'>Jekyll</h2>
+
+<p class='slide'>The most widely-used static site generator on the web.</p>
+
+<ul>
+<li class='slide'>Lets you pull formatting information out into seperate files</li>
+
+<li class='slide'>Content is written in <a href='http://daringfireball.net/projects/markdown/syntax'>Markdown</a></li>
+</ul>
+
+<p>See <a href='http://jekyllrb.com'>http://jekyllrb.com</a> for more.</p>
+</section><section class='slide'>
+<h2 id='deckjs__jekyll'>deck.js + Jekyll</h2>
+
+<p>Many people want a way to write sleek-looking HTML5 presentations in Markdown. Jekyll facilitates this.</p>
+
+<p>This project comprises:</p>
+
+<ul>
+<li>A Jekyll extention which adds deck.js-specific syntax to Markdown</li>
+
+<li>A Jekyll template which adds the deck.js header code to the rendered site</li>
+</ul>
+
+<p>The new syntax is simple, making presentations easy to write and easy to publish. In fact, the Markdown for the previous page looks like this:</p>
+
+<pre><code>Jekyll
+------
+
+The most widely-used static site generator on the web.~
+
+ - Lets you pull formatting information out into seperate files~
+ - Content is written in [Markdown](http://daringfireball.net/projects/markdown/syntax)~
+
+See &lt;http://jekyllrb.com&gt; for more.</code></pre>
+</section><section class='slide'>
+<h2 id='syntax'>Syntax</h2>
+
+<p>There are two differences to standard Markdown:</p>
+
+<ul>
+<li>Instead of producing a horizontal bar, <code>---</code> now separates slides.</li>
+
+<li>A tilde (~) at the end of a heading, paragraph, bullet point, list item, quotation, or code block causes that element to be built in using the build animation.</li>
+</ul>
+
+<p>In addition, the following YAML front-matter must be added to the top of each presentation:</p>
+
+<pre><code>---
+layout: default
+title: [title]
+style: [style - optional]
+transition: [transition - optional]
+---</code></pre>
+</section><section class='slide'>
+<h2 id='themes_and_extentions'>Themes and Extentions</h2>
+
+<p>The <code>style</code> field in the YAML front-matter can be one of the following:</p>
+
+<ul>
+<li>swiss (default)</li>
+
+<li>web-2.0</li>
+
+<li>neon</li>
+</ul>
+
+<p>The <code>transition</code> field can be one of the following:</p>
+
+<ul>
+<li>horizontal-slide (default)</li>
+
+<li>vertical-slide</li>
+
+<li>fade</li>
+</ul>
+
+<p>Both fields can be safely omitted, and new options can be installed by adding CSS files to the &#8220;themes&#8221; directory.</p>
+
+<p>Extentions, in the form of javascript and css files, can also be installed to the &#8220;extentions&#8221; directory. Note that in order to use them, the files must be loaded in the template file, &#8220;_layouts/default.html&#8221;.</p>
+</section><section class='slide'>
+<h2 id='usage'>Usage</h2>
+
+<p>So you&#8217;ve created your presentation file. It is formatted in Markdown, uses &#8221;<code>---</code>&#8221; to separate slides, &#8221;~&#8221; to create builds, and begins with valid YAML front-matter. Save it as &#8220;[filename].slides&#8221; in the root directory of the jekyll project provided. Now, just run</p>
+
+<pre><code>$ jekyll</code></pre>
+
+<p>and the site should be generated in the &#8220;_site&#8221; directory. Point your browser to &#8220;_site/[filename].html&#8221; there to see your presentation.</p>
+
+<p>Alternatively, you can run <code>jekyll --server</code> and point your browser to &#8220;http://localhost:4000/[filename].html&#8221;.</p>
+
+<h2 id='hosting'>Hosting</h2>
+
+<p>Please note when hosting your presentation that most of the contents of &#8220;_site&#8221; are required to display it. In particular, you need &#8220;[filename].html&#8221;, &#8220;css&#8221;, &#8220;js&#8221;, and anything in &#8220;themes&#8221; and &#8220;extentions&#8221; which your presentation makes use of.</p>
+</section><section class='slide'>
+<h2 id='github'>Github</h2>
+
+<p>An easy way to host presentations (for free!) is via Github Pages. Simply create a github repository and push a branch called &#8220;gh-pages&#8221; to it, containing your jekyll project (the root directory, not &#8220;_site&#8221;). Github will build the Jekyll project every time you push to that branch, and the presentation will be available at</p>
+
+<pre><code>http://[username].github.com/[reponame]/[filename].html</code></pre>
+
+<h2 id='roadmap'>Roadmap</h2>
+
+<p>Things to do:</p>
+
+<ul>
+<li>Make the element scope to be built in specifiable (a tilde on a blank line indicates a block-level specification)</li>
+
+<li>Maybe allow the extentions to be specified in the front-matter?</li>
+</ul>
+</section><section class='slide'>
+<h2 id='licence'>Licence</h2>
+
+<pre><code>This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;</code></pre>
+
+<h2 id='authors'>Authors</h2>
+
+<ul>
+<li>Alex Sayers (<a href='mailto:alex.sayers@gmail.com'>&#097;&#108;&#101;&#120;&#046;&#115;&#097;&#121;&#101;&#114;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a>)</li>
+</ul></section>
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.7.min.js"><\/script>')</script>
+
+<!-- Deck Core and extensions -->
+<script src="js/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+
+<!-- Initialize the deck -->
+<script>
+$(function() {
+	$.deck('.slide');
+});
+</script>
+
+</body>
+</html>

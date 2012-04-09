@@ -1,0 +1,43 @@
+---
+layout: default
+title: Testing 1 2 3
+---
+
+Testing 1 2 3
+=============
+
+---
+
+Lists?
+------
+
+ - No Problem!
+ - I can do this all day.
+ - OK that's enough now I think
+
+---
+
+Code?
+-----
+
+You bet!
+
+    class ThisPresentation < Awesome
+      def initialize
+        puts "Check out my slide transitions!"
+      end
+    end
+
+---
+
+Build animations?
+-----------------
+
+We got that.
+
+ - List items~
+ - A classic~
+
+And guess what...~
+
+    puts "Code blocks too? You crazy bro?"~

@@ -96,13 +96,6 @@ Hosting
 
 Please note when hosting your presentation that most of the contents of "_site" are required to display it. In particular, you need "\[filename\].html", "css", "js", and anything in "themes" and "extentions" which your presentation makes use of.
 
-Github
-------
-
-An easy way to host presentations (for free!) is via Github Pages. Simply create a github repository and push a branch called "gh-pages" to it, containing your jekyll project (the root directory, not "_site"). Github will build the Jekyll project every time you push to that branch, and the presentation will be available at
-
-    http://[username].github.com/[reponame]/[filename].html
-
 Roadmap
 -------
 

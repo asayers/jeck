@@ -109,22 +109,6 @@ Please note when hosting your presentation that most of the contents of "_site" 
 
 ---
 
-Github
-------
-
-An easy way to host presentations (for free!) is via Github Pages. Simply create a github repository and push a branch called "gh-pages" to it, containing your jekyll project (the root directory, not "_site"). Github will build the Jekyll project every time you push to that branch, and the presentation will be available at
-
-    http://[username].github.com/[reponame]/[filename].html
-
-Roadmap
--------
-
-Things to do:
- - Make the element scope to be built in specifiable (a tilde on a blank line indicates a block-level specification)
- - Maybe allow the extentions to be specified in the front-matter?
-
----
-
 Licence
 -------
 
@@ -140,6 +124,15 @@ Licence
   
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+---
+
+Roadmap
+-------
+
+Things to do:
+ - Make the element scope to be built in specifiable (a tilde on a blank line indicates a block-level specification)
+ - Maybe allow the extentions to be specified in the front-matter?
 
 Authors
 -------

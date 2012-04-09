@@ -1,0 +1,145 @@
+Jeck
+====
+
+Jekyll + deck.js
+
+---
+
+deck.js
+-------
+
+A fantastic javascript library for creating a high-quality HTML5 presentations.~
+
+ - Presentation is contained in a single HTML file~
+ - Style and transition are defined by separate CSS files~
+ - Allows build animations~
+
+See <http://imakewebthings.com/deck.js/> for more.
+
+Jekyll
+------
+
+The most widely-used static site generator on the web.~
+
+ - Lets you pull formatting information out into seperate files~
+ - Content is written in [Markdown](http://daringfireball.net/projects/markdown/syntax)~
+
+See <http://jekyllrb.com> for more.
+
+---
+
+deck.js + Jekyll
+----------------
+
+Many people want a way to write sleek-looking HTML5 presentations in Markdown. Jekyll facilitates this.
+
+This project comprises:
+ - A Jekyll extention which adds deck.js-specific syntax to Markdown
+ - A Jekyll template which adds the deck.js header code to the rendered site
+
+The new syntax is simple, making presentations easy to write and easy to publish. In fact, the Markdown for the previous page looks like this:
+
+    Jekyll
+    ------
+
+    The most widely-used static site generator on the web.~
+
+     - Lets you pull formatting information out into seperate files~
+     - Content is written in [Markdown](http://daringfireball.net/projects/markdown/syntax)~
+
+    See <http://jekyllrb.com> for more.
+
+---
+
+Syntax
+------
+
+There are two differences to standard Markdown:
+
+ - Instead of producing a horizontal bar, `---` now separates slides.
+ - A tilde (~) at the end of a heading, paragraph, bullet point, list item, quotation, or code block causes that element to be built in using the build animation.
+
+In addition, the following YAML front-matter must be added to the top of each presentation:
+
+    ---
+    layout: default
+    title: [title]
+    style: [style - optional]
+    transition: [transition - optional]
+    ---
+
+---
+
+Themes and Extentions
+---------------------
+
+The `style` field in the YAML front-matter can be one of the following:
+ - swiss (default)
+ - web-2.0
+ - neon
+
+The `transition` field can be one of the following:
+ - horizontal-slide (default)
+ - vertical-slide
+ - fade
+
+Both fields can be safely omitted, and new options can be installed by adding CSS files to the "themes" directory.
+
+Extentions, in the form of javascript and css files, can also be installed to the "extentions" directory. Note that in order to use them, the files must be loaded in the template file, "_layouts/default.html".
+
+---
+
+Usage
+-----
+
+So you've created your presentation file. It is formatted in Markdown, uses "`---`" to separate slides, "~" to create builds, and begins with valid YAML front-matter. Save it as "\[filename\].slides" in the root directory of the jekyll project provided. Now, just run
+
+    $ jekyll
+
+and the site should be generated in the "_site" directory. Point your browser to "_site/\[filename\].html" there to see your presentation.
+
+Alternatively, you can run `jekyll --server` and point your browser to "http://localhost:4000/\[filename\].html".
+
+Hosting
+-------
+
+Please note when hosting your presentation that most of the contents of "_site" are required to display it. In particular, you need "\[filename\].html", "css", "js", and anything in "themes" and "extentions" which your presentation makes use of.
+
+---
+
+Github
+------
+
+An easy way to host presentations (for free!) is via Github Pages. Simply create a github repository and push a branch called "gh-pages" to it, containing your jekyll project (the root directory, not "_site"). Github will build the Jekyll project every time you push to that branch, and the presentation will be available at
+
+    http://[username].github.com/[reponame]/[filename].html
+
+Roadmap
+-------
+
+Things to do:
+ - Make the element scope to be built in specifiable (a tilde on a blank line indicates a block-level specification)
+ - Maybe allow the extentions to be specified in the front-matter?
+
+---
+
+Licence
+-------
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+  
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+Authors
+-------
+
+- Alex Sayers (<alex.sayers@gmail.com>)

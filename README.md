@@ -3,30 +3,27 @@ Jeck
 
 Jekyll + deck.js
 
----
 
 deck.js
 -------
 
-A fantastic javascript library for creating a high-quality HTML5 presentations.~
+A fantastic javascript library for creating a high-quality HTML5 presentations.
 
- - Presentation is contained in a single HTML file~
- - Style and transition are defined by separate CSS files~
- - Allows build animations~
+ - Presentation is contained in a single HTML file
+ - Style and transition are defined by separate CSS files
+ - Allows build animations
 
 See <http://imakewebthings.com/deck.js/> for more.
 
 Jekyll
 ------
 
-The most widely-used static site generator on the web.~
+The most widely-used static site generator on the web.
 
- - Lets you pull formatting information out into seperate files~
- - Content is written in [Markdown](http://daringfireball.net/projects/markdown/syntax)~
+ - Lets you pull formatting information out into seperate files
+ - Content is written in [Markdown](http://daringfireball.net/projects/markdown/syntax)
 
 See <http://jekyllrb.com> for more.
-
----
 
 deck.js + Jekyll
 ----------------
@@ -49,8 +46,6 @@ The new syntax is simple, making presentations easy to write and easy to publish
 
     See <http://jekyllrb.com> for more.
 
----
-
 Syntax
 ------
 
@@ -67,8 +62,6 @@ In addition, the following YAML front-matter must be added to the top of each pr
     style: [style - optional]
     transition: [transition - optional]
     ---
-
----
 
 Themes and Extentions
 ---------------------
@@ -87,8 +80,6 @@ Both fields can be safely omitted, and new options can be installed by adding CS
 
 Extentions, in the form of javascript and css files, can also be installed to the "extentions" directory. Note that in order to use them, the files must be loaded in the template file, "_layouts/default.html".
 
----
-
 Usage
 -----
 
@@ -105,8 +96,6 @@ Hosting
 
 Please note when hosting your presentation that most of the contents of "_site" are required to display it. In particular, you need "\[filename\].html", "css", "js", and anything in "themes" and "extentions" which your presentation makes use of.
 
----
-
 Github
 ------
 
@@ -120,8 +109,6 @@ Roadmap
 Things to do:
  - Make the element scope to be built in specifiable (a tilde on a blank line indicates a block-level specification)
  - Maybe allow the extentions to be specified in the front-matter?
-
----
 
 Licence
 -------

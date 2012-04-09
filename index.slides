@@ -112,6 +112,8 @@ Please note when hosting your presentation that most of the contents of "_site" 
 Licence
 -------
 
+The material written as part of this prject are licensed under the GPL:
+
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -124,6 +126,8 @@ Licence
   
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+Please check Jekyll and deck.js for their respective licences.
 
 ---
 

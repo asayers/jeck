@@ -21,16 +21,16 @@
 	
   <!-- Style theme. More available in /css/style/ or create your own. -->
   {% if page.style %}
-    <link rel="stylesheet" href="css/style/{{ page.style }}.css">
+    <link rel="stylesheet" href="themes/style/{{ page.style }}.css">
   {% else %}
-    <link rel="stylesheet" href="css/style/swiss.css">
+    <link rel="stylesheet" href="css/style.default.css">
   {% endif %}
 	
   <!-- Transition theme. More available in /css/transition/ or create your own. -->
   {% if page.transition %}
-	  <link rel="stylesheet" href="css/transition/{{ page.transition }}.css">
+	  <link rel="stylesheet" href="themes/transition/{{ page.transition }}.css">
   {% else %}
-	  <link rel="stylesheet" href="css/transition/horizontal-slide.css">
+	  <link rel="stylesheet" href="css/transition.default.css">
   {% endif %}
 
 	<script src="js/modernizr.custom.js"></script>

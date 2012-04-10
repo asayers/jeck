@@ -1,8 +1,3 @@
----
-layout: default
-title: Jeck - Jekyll + deck.js
----
-
 Jeck
 ====
 
